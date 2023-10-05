@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5caab134-740a-4b64-a5f5-342ca366fe37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/baseURL/GoRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/getRequest/Get01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/getRequest/Get02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/getRequest/Get03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/getRequest/YeniGet04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/JsonToJava.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2WM3a1AuHStrnzz6EO9n3YuxJpL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="TestNG.YeniGet04.get04">
+    <configuration name="Get01.get01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiChallangeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="getRequest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="getRequest" />
+      <option name="MAIN_CLASS_NAME" value="getRequest.Get01" />
+      <option name="METHOD_NAME" value="get01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Get02.get02" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiChallangeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="getRequest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="getRequest" />
+      <option name="MAIN_CLASS_NAME" value="getRequest.Get02" />
+      <option name="METHOD_NAME" value="get02" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Get03.get03" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiChallangeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="getRequest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="getRequest" />
+      <option name="MAIN_CLASS_NAME" value="getRequest.Get03" />
+      <option name="METHOD_NAME" value="get03" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="YeniGet04.get04" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiChallangeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="getRequest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="getRequest" />
+      <option name="MAIN_CLASS_NAME" value="getRequest.YeniGet04" />
+      <option name="METHOD_NAME" value="get04" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.YeniGet04.get04" />
+        <item itemvalue="TestNG.Get03.get03" />
+        <item itemvalue="TestNG.Get02.get02" />
+        <item itemvalue="JUnit.Get01.get01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5caab134-740a-4b64-a5f5-342ca366fe37" name="Changes" comment="" />
+      <created>1696528684932</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696528684932</updated>
+    </task>
+    <servers />
+  </component>
+</project>
