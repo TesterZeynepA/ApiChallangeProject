@@ -11,7 +11,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class YeniGet04 extends GoRest {
+public class Get04 extends GoRest {
 
      /**
         Given
