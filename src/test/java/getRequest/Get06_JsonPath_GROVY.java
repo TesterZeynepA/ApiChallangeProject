@@ -70,6 +70,44 @@ public class Get06_JsonPath_GROVY extends DummyRestApi {
        Assert.assertEquals(8, counter);
 
 
+        //task 2 : id si 17 den büyük olanları konsola yazdırınız
+       // 7 tane olduğunu assert ediniz.
+
+        List<Integer> id = jsonPath.getList("data.id");
+
+        System.out.println("id = " + id);
+
+        int count =0;
+
+        for (Integer f: id) {
+
+            if (f>17){
+                count++;
+            }
+
+        }
+        System.out.println("count = " + count);
+
+        Assert.assertEquals(7, count);
+        //2. yol GROVY LANG.
+
+        List<Integer> ids = jsonPath.getList("data.findAll{(it.id)>17}.id");
+        System.out.println("ids = " + ids);
+        Assert.assertEquals(7, ids.size());
+
+        List<Integer> idNames = jsonPath.getList("data.findAll{(it.id)>17}.employee_name");
+        System.out.println("idNames = " + idNames);
+
+
+        // task 3: salary si 100.000'den az olanları konsola yazdırınız.
+        // Doris Wilder'ın bunlardan biri olduğunu assert ediniz.
+
+        List<Integer> salaryList = jsonPath.getList("data.findAll{(it.employee_salary)<100000}.employee_name");
+        System.out.println("salaryList = " + salaryList);
+
+        Assert.assertEquals("Doris Wilder", salaryList);
+
+
     }
 
 }
