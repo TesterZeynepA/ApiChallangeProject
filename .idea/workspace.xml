@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caab134-740a-4b64-a5f5-342ca366fe37" name="Changes" comment="Challange project homework solved commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/baseURL/JsonPlaceHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/getRequest/Get07_TestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/getRequest/Get08_Pojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojoData/GoRestPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/postRequest/post01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testData/JsonPlacesHolderTestData.java" afterDir="false" />
+    <list default="true" id="5caab134-740a-4b64-a5f5-342ca366fe37" name="Changes" comment="Challange project 07.10.2023 cumartesi solved commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Homework/Task04/restfulBooker_DELETE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Homework/task03/JsonPlaceHolder_PUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/baseURL/RestfulBooker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojoData/JsonPlaceHolderPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojoData/RestfulBookerPOJO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/getRequest/Get06_JsonPath_GROVY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/getRequest/Get06_JsonPath_GROVY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Homework/Task01/JsonPlaceHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Homework/Task01/JsonPlaceHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Homework/Task02/TheMovieDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Homework/Task02/TheMovieDb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,61 +46,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Get08_Pojo.get08">
-    <configuration name="Get05.get05" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiChallangeProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="getRequest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="getRequest" />
-      <option name="MAIN_CLASS_NAME" value="getRequest.Get05" />
-      <option name="METHOD_NAME" value="get05" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Get06_JsonPath_GROVY.get06" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiChallangeProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="getRequest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="getRequest" />
-      <option name="MAIN_CLASS_NAME" value="getRequest.Get06_JsonPath_GROVY" />
-      <option name="METHOD_NAME" value="get06" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Get07_TestData.get07" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ApiChallangeProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="getRequest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="getRequest" />
-      <option name="MAIN_CLASS_NAME" value="getRequest.Get07_TestData" />
-      <option name="METHOD_NAME" value="get07" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.JsonPlaceHolder_PUT.post01">
     <configuration name="Get08_Pojo.get08" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ApiChallangeProject" />
       <extension name="coverage">
@@ -113,6 +59,59 @@
       <option name="MAIN_CLASS_NAME" value="getRequest.Get08_Pojo" />
       <option name="METHOD_NAME" value="get08" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonPlaceHolder_PUT.post01" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiChallangeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework.task03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Homework.task03" />
+      <option name="MAIN_CLASS_NAME" value="Homework.task03.JsonPlaceHolder_PUT" />
+      <option name="METHOD_NAME" value="post01" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonPlaceHolder.task01" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiChallangeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework.Task01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Homework.Task01" />
+      <option name="MAIN_CLASS_NAME" value="Homework.Task01.JsonPlaceHolder" />
+      <option name="METHOD_NAME" value="task01" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TheMovieDb" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiChallangeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework.Task02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Homework.Task02" />
+      <option name="MAIN_CLASS_NAME" value="Homework.Task02.TheMovieDb" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.JsonPlaceHolder_PUT.post01" />
+        <item itemvalue="TestNG.JsonPlaceHolder.task01" />
+        <item itemvalue="TestNG.TheMovieDb" />
         <item itemvalue="TestNG.Get08_Pojo.get08" />
         <item itemvalue="TestNG.post01.post01" />
-        <item itemvalue="TestNG.Get07_TestData.get07" />
-        <item itemvalue="TestNG.Get06_JsonPath_GROVY.get06" />
-        <item itemvalue="TestNG.Get05.get05" />
       </list>
     </recent_temporary>
   </component>
@@ -170,12 +169,20 @@
       <option name="project" value="LOCAL" />
       <updated>1696703695091</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Challange project 07.10.2023 cumartesi solved commit">
+      <created>1696715115580</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696715115581</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Challange project first commit" />
     <MESSAGE value="Challange project homework solved commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Challange project homework solved commit" />
+    <MESSAGE value="Challange project 07.10.2023 cumartesi solved commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Challange project 07.10.2023 cumartesi solved commit" />
   </component>
 </project>

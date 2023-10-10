@@ -4,7 +4,12 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.http.HttpStatus;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.JsonToJava;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
@@ -46,10 +51,17 @@ public class JsonPlaceHolder {
                 .statusCode(HttpStatus.SC_OK)
                 .extract().response();
 
-      //  response.then().assertThat().contentType("application/json");
-//
-      //  response.then().assertThat().body("title", equalTo("et itaque necessitatibus maxime molestiae qui quas velit"));
+      response.then().assertThat().contentType("application/json");
 
+
+       Map<String, Object> actualMap = JsonToJava.convertJsonToJavaObject(response.asString(), HashMap.class);
+
+       Assert.assertEquals(actualMap.get("userId"), actualMap.get(2));
+       Assert.assertEquals(actualMap.get("userId"), actualMap.get(7));
+       Assert.assertEquals(actualMap.get("userId"), actualMap.get(9));
+
+
+        response.prettyPrint();
 
 
 

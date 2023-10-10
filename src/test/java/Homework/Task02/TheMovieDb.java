@@ -4,6 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import testData.JsonPlacesHolderTestData;
 import utilities.JsonToJava;
 
 import java.util.HashMap;
@@ -52,10 +53,6 @@ public class TheMovieDb extends Pojo02{
 		 response.then().assertThat()
 				 .statusCode(200)
 				 .contentType("application/json");
-
-		// Assert.assertEquals(646389, 646389);
-		// Assert.assertEquals(536554, 536554);
-		// Assert.assertEquals(640146, 640146);
 
 		 Map<String, Object> actualMap = JsonToJava.convertJsonToJavaObject(response.asString(), HashMap.class);
 
