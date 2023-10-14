@@ -1,19 +1,16 @@
 package Homework.Task01;
 
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.apache.http.HttpStatus;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import utilities.JsonToJava;
+import io.restassured.RestAssured;
 
-import java.util.HashMap;
+import io.restassured.response.Response;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import java.util.List;
 import java.util.Map;
 
-import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 public class JsonPlaceHolder {
 
@@ -37,43 +34,53 @@ public class JsonPlaceHolder {
     */
 
 
-    @Test
 
-    public void task01(){
-        baseURI= "https://jsonplaceholder.typicode.com/todos";
-
-        Response response = given()
-                .accept(ContentType.JSON)
-                .contentType(ContentType.JSON)
-                .when()
-                .get()
-                .then()
-                .statusCode(HttpStatus.SC_OK)
-                .extract().response();
-
-      response.then().assertThat().contentType("application/json");
-
-
-       Map<String, Object> actualMap = JsonToJava.convertJsonToJavaObject(response.asString(), HashMap.class);
-
-       Assert.assertEquals(actualMap.get("userId"), actualMap.get(2));
-       Assert.assertEquals(actualMap.get("userId"), actualMap.get(7));
-       Assert.assertEquals(actualMap.get("userId"), actualMap.get(9));
-
-
-        response.prettyPrint();
-
-
-
-
-
-
-
-
+    @BeforeClass
+    public void setup() {
+        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
     }
 
+    @Test
+    public void get01() {
+
+        Response response = given()
+                .when()
+                .get("/todos");
 
 
+        int statusCode = response.getStatusCode();
+        Assert.assertEquals(statusCode, 200);
+
+        String contentType = response.getContentType();
+        Assert.assertEquals(contentType, "application/json; charset=utf-8");
+
+        List<Map<String, Object>> todos = response.jsonPath().getList(".");
+
+        Assert.assertEquals(todos.size(), 200);
+
+
+        boolean titleFound = false;
+        for (Map<String, Object> todo : todos) {
+            if (todo.get("title").equals("quis ut nam facilis et officia qui")) {
+                titleFound = true;
+                break;
+            }
+        }
+        Assert.assertTrue(titleFound);
+
+        boolean userIdsFound = false;
+        for (Map<String, Object> todo : todos) {
+            int userId = (Integer) todo.get("userId");
+            if (userId == 2 || userId == 7 || userId == 9) {
+                userIdsFound = true;
+                break;
+            }
+        }
+        Assert.assertTrue(userIdsFound);
+    }
 }
+
+
+
 
 

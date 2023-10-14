@@ -12,6 +12,7 @@ public class RestfulBooker {
     @BeforeMethod
     public void setUpBaseURL(){
 
+
         specification = new RequestSpecBuilder().setBaseUri("https://restful-booker.herokuapp.com").build();
     }
 

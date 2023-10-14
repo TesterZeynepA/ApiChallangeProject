@@ -1,17 +1,13 @@
 package Homework.Task02;
-
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import org.testng.Assert;
+import io.restassured.RestAssured;
+import org.junit.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import testData.JsonPlacesHolderTestData;
-import utilities.JsonToJava;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItems;
 
 public class TheMovieDb extends Pojo02{
 
@@ -37,35 +33,43 @@ public class TheMovieDb extends Pojo02{
 
      */
 
-	 @Test
 
-	public void task02(){
+		@BeforeClass
+		public void setup() {
+			RestAssured.baseURI = "https://api.themoviedb.org/3/movie/popular";
+		}
 
-		 Response response = given()
-				 .accept(ContentType.JSON)
-				 .basePath("/3/movie/popular")
-				 .queryParam("api_key", Api_Key)
-				 .spec(specification).when()
-				 .get("/3/movie/popular")
-				 .then()
-				 .extract().response();
+		@Test
+		public void testGet01() {
 
-		 response.then().assertThat()
-				 .statusCode(200)
-				 .contentType("application/json");
+			given()
+					.param("api_key", "4c841d9ec32b7f8c0069cf3fec36774f")
+					.when()
+					.get()
+					.then()
+					.statusCode(200)
+					.contentType("application/json");
+		}
 
-		 Map<String, Object> actualMap = JsonToJava.convertJsonToJavaObject(response.asString(), HashMap.class);
+	@Test
+	public void testGet02() {
 
-		 Assert.assertEquals(actualMap.get("id"), actualMap.get(646389));
-		 Assert.assertEquals(actualMap.get("id"), actualMap.get(536554));
-		 Assert.assertEquals(actualMap.get("id"), actualMap.get(640146));
+		String apiKey = "4c841d9ec32b7f8c0069cf3fec36774f";
 
+		List<Integer> expectedIds = List.of(678512, 893723, 980489);
 
-		 response.prettyPrint();
+		List<Integer> actualIds = given()
+				.param("api_key", apiKey)
+				.when()
+				.get()
+				.then()
+				.statusCode(200)
+				.contentType("application/json")
+				.extract().jsonPath().getList("results.id", Integer.class);
 
+		for (int expectedId : expectedIds) {
 
-
-	 }
-
-
+			Assert.assertTrue(actualIds.contains(expectedId));
+		}
+	}
 }

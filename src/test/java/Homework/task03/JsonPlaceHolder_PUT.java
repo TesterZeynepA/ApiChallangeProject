@@ -40,8 +40,8 @@ public class JsonPlaceHolder_PUT extends JsonPlaceHolder {
         specification.pathParams("todosPath", "todos", "idPath", "198");
 
         JsonPlaceHolderPOJO expectedData = new JsonPlaceHolderPOJO();
-        expectedData.setUserId(7);
-        expectedData.setTitle("Bu böyle yarım kalmayacak...");
+        expectedData.setUserId(11);
+        expectedData.setTitle("Bu böyle yarım kalmayacak!");
         expectedData.setCompleted(true);
 
         Response response = given().spec(specification)
@@ -58,8 +58,5 @@ public class JsonPlaceHolder_PUT extends JsonPlaceHolder {
         Assert.assertEquals(expectedData.getUserId(), actualMap.get("userId"));
         Assert.assertEquals(expectedData.getTitle(), actualMap.get("title"));
     }
-
-
-
 
 }

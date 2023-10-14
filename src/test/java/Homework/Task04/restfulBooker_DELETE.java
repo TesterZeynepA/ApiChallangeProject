@@ -5,14 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pojoData.BookingDates;
-import pojoData.JsonPlaceHolderPOJO;
-import pojoData.RestfulBookerPOJO;
-import utilities.JsonToJava;
-
-import java.util.HashMap;
-import java.util.Map;
-
+import io.restassured.RestAssured;
+import org.testng.annotations.BeforeClass;
 import static io.restassured.RestAssured.given;
 
 public class restfulBooker_DELETE extends RestfulBooker {
@@ -31,70 +25,50 @@ public class restfulBooker_DELETE extends RestfulBooker {
 		    Response body de "Created" yazdığını verify ediniz.
      */
 
-
 /*
-
-POST ile bookinge post etitğimiz zaaman delete edebiliriz.
-{
-    "firstname": "Marker",
-    "lastname": "Smithchi",
-    "totalprice": 487,
-    "depositpaid": true,
-    "bookingdates": {
-        "checkin": "2021-09-14",
-        "checkout": "2022-03-09"
-    }
-}
-
-
 
 {
 
 delete_bookingID: [1,5,7,8]
 }
  */
+private String token;
+    @BeforeClass
+    public void setup() {
 
-    @Test
-    public void post01(){
-        specification.pathParams("bookingPath", "booking");
+        RestAssured.baseURI = "https://restful-booker.herokuapp.com";
 
-
-
-
-        RestfulBookerPOJO expectedData = new RestfulBookerPOJO();
-        expectedData.setFirstname("Zeynep");
-        expectedData.setLastname("Aytop");
-        expectedData.setTotalprice(571);
-        expectedData.setDepositpaid(true);
-
-
-
-
-        Response response = given().spec(specification)
-                .accept(ContentType.JSON)
-                .contentType(ContentType.JSON)
-                .body(expectedData)
-                .when().put("/{todosPath}/{idPath}");
-
-        Map<String,Object> actualMap = JsonToJava.convertJsonToJavaObject(response.asString(), HashMap.class);
-        System.out.println("actualMap = " + actualMap);
-
-        response.prettyPrint();
-
-        Assert.assertEquals(expectedData.getUserId(), actualMap.get("userId"));
-        Assert.assertEquals(expectedData.getTitle(), actualMap.get("title"));
+        token = getToken("admin", "password123");
     }
 
 
+        @Test
+        public void deleteBooking() {
 
 
+            int bookingId = 5;
 
+            Response response = given()
+                    .cookie("token", token)
+                    .delete("/booking/" + bookingId);
+
+            int statusCode = response.getStatusCode();
+            String responseBody = response.getBody().asString();
+
+            System.out.println("Status Kodu: " + statusCode);
+            System.out.println("Yanıt: " + responseBody);
+
+
+            Assert.assertEquals(statusCode, 201);
+            Assert.assertTrue(responseBody.contains("Created"));
+        }
+
+        public String getToken(String username, String password) {
+            Response response = given()
+                    .contentType(ContentType.JSON)
+                    .body("{\"username\":\"" + username + "\",\"password\":\"" + password + "\"}")
+                    .post("/auth");
+
+            return response.jsonPath().getString("token");
+        }
     }
-
-
-
-
-
-
-
-}
